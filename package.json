@@ -1,0 +1,18 @@
+{
+  "name": "smartlight-hub",
+  "version": "0.0.1",
+  "description": "A soft realtime SmartHome Hub for SmartLight",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "npx parcel serve src/index.html"
+  },
+  "author": "Adrian Jost",
+  "license": "MIT",
+  "dependencies": {
+    "simple-peer": "^9.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "parcel-bundler": "^1.12.4"
+  }
+}
