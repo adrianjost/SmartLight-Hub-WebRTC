@@ -8,20 +8,20 @@ const logList = document.getElementById("logs");
 
 let authUi;
 
-eventbus.on("loggedIn", (user) => {
+eventbus.on("loggedIn", user => {
 	loginForm.classList.add("hidden");
 	hubUi.classList.remove("hidden");
 	if (authUi) {
 		authUi.delete();
 	}
-	store.user = user
+	store.user = user;
 });
 
 eventbus.on("loggedOut", () => {
 	loginForm.classList.remove("hidden");
 	hubUi.classList.add("hidden");
 	authUi = authenticate();
-	delete store.user
+	delete store.user;
 });
 
 const BtnLogout = document.getElementById("logout");
@@ -31,11 +31,16 @@ BtnLogout.addEventListener("click", () => {
 
 eventbus.on("message", message => {
 	const textNode = document.createElement("p");
-	textNode.innerText = `${new Date().toLocaleTimeString()}: ${message}`
+	textNode.innerText = `${new Date().toLocaleTimeString()}: ${message}`;
 	logList.prepend(textNode);
 });
 
-const BtnCreateClient = document.getElementById("create-client")
+const BtnCreateClient = document.getElementById("create-client");
 BtnCreateClient.addEventListener("click", () => {
-	eventbus.send("createClient")
-})
+	eventbus.send("createClient");
+});
+
+const BtnStartHub = document.getElementById("start-hub");
+BtnStartHub.addEventListener("click", () => {
+	eventbus.send("startHub");
+});

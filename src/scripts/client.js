@@ -35,9 +35,7 @@ eventbus.on("createClient", () => {
 		window.addEventListener(
 			"mousemove",
 			event => {
-				peer.send(
-					`x: ${event.x}, y: ${event.y}`
-				);
+				peer.send(`x: ${event.x}, y: ${event.y}`);
 			},
 			{ passive: true }
 		);

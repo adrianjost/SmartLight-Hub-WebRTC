@@ -5,7 +5,7 @@ export const config = {
 	projectId: "smartlight-4861d",
 	storageBucket: "smartlight-4861d.appspot.com",
 	messagingSenderId: "535232876187",
-	appId: "1:535232876187:web:d1d32ada292db2bb3c803e",
+	appId: "1:535232876187:web:d1d32ada292db2bb3c803e"
 };
 
 import * as firebase from "firebase/app";

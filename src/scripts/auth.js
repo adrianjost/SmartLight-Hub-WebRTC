@@ -11,10 +11,10 @@ export default () => {
 			firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 			firebase.auth.EmailAuthProvider.PROVIDER_ID,
 			firebase.auth.GithubAuthProvider.PROVIDER_ID,
-			firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
+			firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
 		]
 	});
-	return ui
+	return ui;
 };
 
 FAuth.onAuthStateChanged(user => {
@@ -26,5 +26,5 @@ FAuth.onAuthStateChanged(user => {
 });
 
 eventbus.on("logout", () => {
-	FAuth.signOut()
-})
+	FAuth.signOut();
+});
