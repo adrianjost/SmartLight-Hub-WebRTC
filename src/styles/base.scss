@@ -1,0 +1,62 @@
+@import "./reset";
+@import "./variables";
+@import "firebaseui/dist/firebaseui.css";
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	padding: 2rem 1rem;
+}
+
+hr {
+	margin: 1em 0;
+	border: 0;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+	width: 100%;
+	max-width: 700px;
+	padding-right: 0;
+	padding-left: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	padding: 8px 16px;
+	margin: 0 4px;
+	color: var(--color-text-inactive);
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	&:first-of-type {
+		margin-left: 0;
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	&.button-primary {
+		color: var(--color-text);
+		border-color: var(--color-border);
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+#logs{
+	margin: 0 auto;
+	text-align: left;
+	width: 80ch;
+}

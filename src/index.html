@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="./index.js" defer></script>
-</head>
-<body>
-	<button type="button">CREATE CLIENT</button>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="./scripts/index.js" defer></script>
+		<link rel="stylesheet" href="./styles/base.scss" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="loginform" class="hidden">
+				<h1>Welcome to the SmartLight Hub</h1>
+				<p>Please Login to activate the Hub</p>
+				<div id="firebaseui-auth-container"></div>
+			</div>
+			<div id="hub-ui" class="hidden">
+				<button type="button" id="create-client" class="button button-primary">
+					CREATE CLIENT
+				</button>
+				<button type="button" id="logout" class="button">LogOut</button>
+				<h2>Logs</h2>
+				<p id="logs"></p>
+			</div>
+		</div>
+	</body>
 </html>

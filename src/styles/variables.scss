@@ -1,0 +1,24 @@
+:root {
+	--color-background: #333;
+
+	/*
+	--color-border: rgba(0, 0, 0, .5);
+	--color-overlay: rgba(0, 0, 0, .5);
+	*/
+	--color-border: rgb(25, 25, 25);
+	--color-overlay: rgb(25, 25, 25);
+	--color-border-i: rgb(230, 230, 230);
+	--color-overlay-i: rgb(230, 230, 230);
+
+	/*
+	--color-text: rgba(255, 255, 255, .75);
+	--color-text-active: rgb(255, 255, 255);
+	--color-text-inactive: rgba(255, 255, 255, .5);
+	*/
+	--color-text: rgb(210, 210, 210);
+	--color-text-active: rgb(255, 255, 255);
+	--color-text-inactive: rgb(170, 170, 170);
+	--color-text-i: rgb(45, 45, 45);
+	--color-text-active-i: rgb(0, 0, 0);
+	--color-text-inactive-i: rgb(95, 95, 95);
+}
