@@ -1,0 +1,16 @@
+name: deploy
+
+on: [push]
+# on:
+#   push:
+#     branches:
+#       - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: deploy to surge
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm run build
+      - run: npx surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

@@ -4,6 +4,7 @@
   "description": "A soft realtime SmartHome Hub for SmartLight",
   "main": "dist/server.js",
   "scripts": {
+    "build": "npx parcel build src/index.html",
     "dev": "npx parcel serve src/index.html"
   },
   "author": "Adrian Jost",
