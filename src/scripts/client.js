@@ -35,7 +35,22 @@ eventbus.on("createClient", () => {
 		window.addEventListener(
 			"mousemove",
 			event => {
-				peer.send(`x: ${event.x}, y: ${event.y}`);
+				peer.send(
+					JSON.stringify({
+						ip: "192.168.1.233",
+						hostname: "sl-wwcw",
+						method: "send",
+						payload: [
+							{
+								color: {
+									"1": event.x % 255,
+									"2": event.y % 255,
+									"3": (event.x + event.y) % 255
+								}
+							}
+						]
+					})
+				);
 			},
 			{ passive: true }
 		);

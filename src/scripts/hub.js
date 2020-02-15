@@ -2,6 +2,7 @@ import Peer from "simple-peer";
 import eventbus from "./eventbus";
 import store from "./store";
 import { FStore } from "./firebase";
+import Connection from "./connection";
 
 const handledSignals = {};
 
@@ -41,11 +42,17 @@ eventbus.on("startHub", () => {
 						);
 				});
 				peer.on("connect", () => {
-					delete handledSignals[signal.id];
+					delete handledSignals[signalData.id];
 				});
-				peer.on("data", data => {
-					console.log(`⏩: "${data.toString()}"`);
-					eventbus.send("message", data);
+				peer.on("data", dataBuffer => {
+					const data = JSON.parse(dataBuffer.toString());
+
+					console.log(`⏩: `, data);
+					eventbus.send("message", JSON.stringify(data));
+
+					new Connection([data.ip, data.hostname])[data.method](
+						...(data.payload || [])
+					);
 				});
 
 				handledSignals[signalData.id] = true;
