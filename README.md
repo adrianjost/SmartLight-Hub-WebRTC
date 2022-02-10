@@ -6,12 +6,12 @@ Currently this project is in prototyping phase and does not send any colors what
 
 ## Usage
 
-1. open http://hub.smartlight.ga and start hub mode
-1. open http://hub.smartlight.ga on x other devices and click "create client". From now on, all mouse move events of this device will be send and display on the device in hub mode.
+1. open http://hub.smartlight.hackedit.de and start hub mode
+2. open http://hub.smartlight.hackedit.de on x other devices and click "create client". From now on, all mouse move events of this device will be send and display on the device in hub mode.
 
 ## Setup
 
 1. Install dependencies: `npm i`
-1. Start dev server: `npm run dev`
-1. build project: `npm run build`
-1. deploy the `/dist` content
+2. Start dev server: `npm run dev`
+3. build project: `npm run build`
+4. deploy the `/dist` content
